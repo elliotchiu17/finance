@@ -7,3 +7,15 @@
 .bank-edit{white-space:nowrap;color:#425548;border:1px solid #dfe4d8;background:#f6f7f0;border-radius:10px;padding:6px 9px;cursor:pointer;font:inherit;font-size:12px}
 .bank-edit:hover{border-color:#93a790;background:#e8efe1}
 .bank-pencil{opacity:.6;margin-left:4px}
+
+/* V1.4: on-page ETF editor */
+.etf-editor-panel{max-width:760px;width:min(94vw,760px);max-height:90vh;overflow:auto}
+.editor-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.editor-form label{display:flex;flex-direction:column;gap:6px;color:#4b584d;font-size:13px;font-weight:600}
+.editor-form input,.editor-form select{width:100%;background:#faf7ec;border:1px solid #d4d3c5;border-radius:12px;padding:11px 12px;font:inherit;color:#2c392e}
+.editor-form input[readonly]{opacity:.7;background:#ebe9dc}
+.editor-actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.editor-tools{margin:16px 0;border-top:1px solid #d3d4c6;padding-top:14px}
+.editor-tools p,.editor-explain{font-size:13px;line-height:1.65;color:#627062}
+.upload-label{cursor:pointer;display:inline-flex;align-items:center}
+@media(max-width:650px){.editor-form{grid-template-columns:1fr}}
