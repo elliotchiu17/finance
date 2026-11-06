@@ -19,3 +19,19 @@
 .editor-tools p,.editor-explain{font-size:13px;line-height:1.65;color:#627062}
 .upload-label{cursor:pointer;display:inline-flex;align-items:center}
 @media(max-width:650px){.editor-form{grid-template-columns:1fr}}
+
+/* V1.5: compact names, multiple category tags and item-specific editable data */
+.data-table .etf-name-col{min-width:160px;max-width:235px;width:205px}
+.data-table .etf-name-col .name-main{font-size:14px;line-height:1.45;overflow-wrap:anywhere}
+.editor-type-field,.fee-fields{grid-column:1/-1;border:1px solid #d7d6c8;border-radius:13px;padding:12px 14px;margin:0;min-width:0}
+.editor-type-field legend,.fee-fields legend{font-size:13px;font-weight:700;color:#485b4d;padding:0 6px}
+.editor-type-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.editor-type-grid label{flex-direction:row;align-items:center;gap:7px;font-size:12px;font-weight:500}
+.editor-type-grid input{width:16px;height:16px;accent-color:#617d62;flex:none}
+.editor-type-field small,.fee-fields small{display:block;font-size:11px;color:#777e71;margin-top:10px;line-height:1.6}
+.fee-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.editor-form textarea{width:100%;background:#faf7ec;border:1px solid #d4d3c5;border-radius:12px;padding:11px 12px;font:inherit;color:#2c392e;resize:vertical}
+.editor-form .editor-full{grid-column:1/-1}
+@media(max-width:650px){.editor-type-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fee-pair{grid-template-columns:1fr}}
+
+.data-table td.etf-name-col{white-space:normal;min-width:160px;max-width:235px;width:205px}
