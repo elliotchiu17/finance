@@ -9,7 +9,7 @@
   },
   "items": [
     {
-      "code": "000639",
+      "code": "00639",
       "name": "富邦深100",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "深証100指數",
@@ -24,7 +24,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000645",
+      "code": "00645",
       "name": "富邦日本",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "東証股價指數",
@@ -39,7 +39,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000646",
+      "code": "00646",
       "name": "元大S&P500",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "標普指數(S&P 500®)",
@@ -54,7 +54,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000652",
+      "code": "00652",
       "name": "富邦印度",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "NIFTY指數",
@@ -69,7 +69,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000660",
+      "code": "00660",
       "name": "元大歐洲50",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "歐洲STOXX50指數(EURO STOXX 50® PR in EUR)",
@@ -84,7 +84,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000661",
+      "code": "00661",
       "name": "元大日經225",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "日經225指數(Nikkei Stock Average)",
@@ -99,7 +99,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000662",
+      "code": "00662",
       "name": "富邦NASDAQ",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "NASDAQ-100指數",
@@ -114,7 +114,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000678",
+      "code": "00678",
       "name": "群益那斯達克生技(原簡稱:群益NBI生技)",
       "issuer": "群益證券投資信託股份有限公司",
       "index": "那斯達克生技指數（Nasdaq Biotechnology Index）",
@@ -129,7 +129,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000690",
+      "code": "00690",
       "name": "兆豐藍籌30",
       "issuer": "兆豐國際證券投資信託股份有限公司",
       "index": "藍籌30指數",
@@ -144,7 +144,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000692",
+      "code": "00692",
       "name": "富邦公司治理",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "臺灣證券交易所公司治理100 指數",
@@ -159,7 +159,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000700",
+      "code": "00700",
       "name": "富邦恒生國企",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "恒生中國企業指數",
@@ -174,7 +174,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000701",
+      "code": "00701",
       "name": "國泰股利精選30",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "臺灣指數公司低波動股利精選30指數",
@@ -189,7 +189,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000702",
+      "code": "00702",
       "name": "國泰標普低波高息",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "標普500低波高息指數",
@@ -204,7 +204,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000703",
+      "code": "00703",
       "name": "台新MSCI中國",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "MSCI 中國指數(MSCI China Index)",
@@ -219,7 +219,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000709",
+      "code": "00709",
       "name": "富邦歐洲",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "富時發展歐洲指數",
@@ -234,7 +234,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000712",
+      "code": "00712",
       "name": "復華富時不動產(原簡稱:FH富時不動產)",
       "issuer": "復華證券投資信託股份有限公司",
       "index": "富時NAREIT抵押權型不動產投資信託指數(FTSE NAREIT Mortgage REITs Index)",
@@ -249,7 +249,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000713",
+      "code": "00713",
       "name": "元大台灣高息低波",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "臺灣指數公司特選高股息低波動指數",
@@ -264,7 +264,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000714",
+      "code": "00714",
       "name": "群益道瓊美國地產",
       "issuer": "群益證券投資信託股份有限公司",
       "index": "道瓊美國地產指數(Dow Jones U.S. Real Estate Index)",
@@ -279,7 +279,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000717",
+      "code": "00717",
       "name": "富邦美國特別股",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "標普美國特別股指數",
@@ -294,7 +294,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000728",
+      "code": "00728",
       "name": "第一金工業30",
       "issuer": "第一金證券投資信託股份有限公司",
       "index": "臺灣指數公司工業菁英30指數",
@@ -309,7 +309,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000730",
+      "code": "00730",
       "name": "富邦臺灣優質高息",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "道瓊斯台灣優質高股息30指數",
@@ -324,7 +324,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000731",
+      "code": "00731",
       "name": "復華富時高息低波(原簡稱:FH富時高息低波)",
       "issuer": "復華證券投資信託股份有限公司",
       "index": "富時台灣高股息低波動指數(FTSE Taiwan High Dividend Low Volatility Index)",
@@ -339,7 +339,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000733",
+      "code": "00733",
       "name": "富邦臺灣中小",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "臺灣指數公司中小型A級動能50指數",
@@ -354,7 +354,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000735",
+      "code": "00735",
       "name": "國泰臺韓科技",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "臺韓資訊科技指數",
@@ -369,7 +369,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000736",
+      "code": "00736",
       "name": "國泰新興市場",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "富時新興市場(納入A股)指數",
@@ -384,7 +384,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000737",
+      "code": "00737",
       "name": "國泰AI機器人",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "納斯達克CTA全球人工智慧及機器人指數",
@@ -399,7 +399,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000739",
+      "code": "00739",
       "name": "元大MSCI A股",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "MSCI中國A股國際通指數(MSCI China A Inclusion Index)",
@@ -414,7 +414,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000752",
+      "code": "00752",
       "name": "中信中國50",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "MSCI 中國外資自由投資50不含A及B股指數",
@@ -429,7 +429,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000757",
+      "code": "00757",
       "name": "統一FANG+",
       "issuer": "統一證券投資信託股份有限公司",
       "index": "NYSE FANG+ Index",
@@ -444,7 +444,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000762",
+      "code": "00762",
       "name": "元大全球AI",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "STOXX全球人工智慧指數(STOXX® Global Artificial Intelligence Index)",
@@ -459,7 +459,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000770",
+      "code": "00770",
       "name": "國泰北美科技",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "標普北美科技行業指數",
@@ -474,7 +474,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000771",
+      "code": "00771",
       "name": "元大US高息特別股",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "標普美國高收益特別股指數(S&P U.S. High Yield Preferred Stock Index)",
@@ -489,7 +489,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000783",
+      "code": "00783",
       "name": "富邦中証500",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "中証小盤500指數",
@@ -504,7 +504,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000830",
+      "code": "00830",
       "name": "國泰費城半導體",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "美國費城半導體指數",
@@ -519,7 +519,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000850",
+      "code": "00850",
       "name": "元大臺灣ESG永續",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "臺灣永續指數(FTSE4Good TIP Taiwan ESG Index)",
@@ -534,7 +534,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000851",
+      "code": "00851",
       "name": "台新全球AI",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "SG全球AI機器人精選指數",
@@ -549,7 +549,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000861",
+      "code": "00861",
       "name": "元大全球未來通訊",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "ICE FactSet全球未來通訊指數(ICE FactSet Global NextGen Communications Index)",
@@ -564,7 +564,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000875",
+      "code": "00875",
       "name": "國泰網路資安",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "納斯達克ISE全球網路資安指數",
@@ -579,7 +579,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000876",
+      "code": "00876",
       "name": "元大全球5G",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "iSTOXX全球5G關鍵科技指數",
@@ -594,7 +594,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000878",
+      "code": "00878",
       "name": "國泰永續高股息",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "MSCI臺灣ESG永續高股息精選30指數",
@@ -609,7 +609,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000881",
+      "code": "00881",
       "name": "國泰台灣科技龍頭",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃FactSet科技龍頭通訊指數",
@@ -624,7 +624,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000882",
+      "code": "00882",
       "name": "中信中國高股息",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "恒生中國高股息率指數",
@@ -639,7 +639,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000885",
+      "code": "00885",
       "name": "富邦越南",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "富時越南30指數",
@@ -654,7 +654,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000891",
+      "code": "00891",
       "name": "中信關鍵半導體",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE FactSet臺灣ESG永續關鍵半導體指數",
@@ -669,7 +669,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000892",
+      "code": "00892",
       "name": "富邦台灣半導體",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "NYSE FactSet台灣核心半導體指數",
@@ -684,7 +684,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000893",
+      "code": "00893",
       "name": "國泰智能電動車",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "ICE FactSet 全球智能電動車指數",
@@ -699,7 +699,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000894",
+      "code": "00894",
       "name": "中信小資高價30",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "臺灣指數公司特選小資高價30指數",
@@ -714,7 +714,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000895",
+      "code": "00895",
       "name": "富邦未來車",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "MSCI ACWI IMI精選未來車30指數",
@@ -729,7 +729,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000896",
+      "code": "00896",
       "name": "中信綠能及電動車",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃綠能及電動車指數",
@@ -744,7 +744,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000897",
+      "code": "00897",
       "name": "富邦基因免疫生技",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "NYSE FactSet全球基因免疫生技指數",
@@ -759,7 +759,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000898",
+      "code": "00898",
       "name": "國泰基因免疫革命",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "Solactive全球基因免疫與醫療革命指數",
@@ -774,7 +774,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000899",
+      "code": "00899",
       "name": "FT潔淨能源",
       "issuer": "富蘭克林華美證券投資信託股份有限公司",
       "index": "標普全球潔淨能源精選指數",
@@ -789,7 +789,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000900",
+      "code": "00900",
       "name": "富邦特選高股息30",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃高股息 30 指數",
@@ -804,7 +804,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000901",
+      "code": "00901",
       "name": "永豐智能車供應鏈",
       "issuer": "永豐證券投資信託股份有限公司",
       "index": "特選臺灣智能車供應鏈聯盟指數",
@@ -819,7 +819,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000902",
+      "code": "00902",
       "name": "中信電池及儲能",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE FactSet電池與儲能科技指數",
@@ -834,7 +834,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000903",
+      "code": "00903",
       "name": "富邦元宇宙",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "Solactive元宇宙指數",
@@ -849,7 +849,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000904",
+      "code": "00904",
       "name": "台新臺灣半導體30",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "臺灣指數公司臺灣全市場半導體精選30指數",
@@ -864,7 +864,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000905",
+      "code": "00905",
       "name": "FT臺灣Smart",
       "issuer": "富蘭克林華美證券投資信託股份有限公司",
       "index": "臺灣指數公司特選Smart多因子指數 (簡稱「特選Smart多因子指數」)",
@@ -879,7 +879,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000907",
+      "code": "00907",
       "name": "永豐優息存股",
       "issuer": "永豐證券投資信託股份有限公司",
       "index": "特選臺灣優選入息存股指數",
@@ -894,7 +894,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000908",
+      "code": "00908",
       "name": "富邦入息REITs+",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "全球入息不動產與基礎建設指數",
@@ -909,7 +909,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000909",
+      "code": "00909",
       "name": "國泰數位支付服務",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "Solactive全球數位支付服務指數",
@@ -924,7 +924,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000910",
+      "code": "00910",
       "name": "第一金太空衛星",
       "issuer": "第一金證券投資信託股份有限公司",
       "index": "太空衛星指數",
@@ -939,7 +939,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000911",
+      "code": "00911",
       "name": "兆豐洲際半導體",
       "issuer": "兆豐國際證券投資信託股份有限公司",
       "index": "洲際半導體指數 (ICE Semiconductor Index)",
@@ -954,7 +954,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000912",
+      "code": "00912",
       "name": "中信臺灣智慧 50",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃智慧50指數",
@@ -969,7 +969,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000913",
+      "code": "00913",
       "name": "兆豐台灣晶圓製造",
       "issuer": "兆豐國際證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣晶圓製造指數",
@@ -984,7 +984,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000915",
+      "code": "00915",
       "name": "凱基優選高股息30",
       "issuer": "凱基證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃多因子優選高股息30指數",
@@ -999,7 +999,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000916",
+      "code": "00916",
       "name": "國泰全球品牌50",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "ICE FactSet全球品牌50指數",
@@ -1014,7 +1014,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000917",
+      "code": "00917",
       "name": "中信特選金融",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE FactSet特選金融及數據指數",
@@ -1029,7 +1029,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000918",
+      "code": "00918",
       "name": "大華優利高填息30",
       "issuer": "大華銀證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃優選股利高填息30指數",
@@ -1044,7 +1044,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000919",
+      "code": "00919",
       "name": "群益台灣精選高息",
       "issuer": "群益證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃精選高息指數",
@@ -1059,7 +1059,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000920",
+      "code": "00920",
       "name": "富邦ESG綠色電力",
       "issuer": "富邦證券投資信託股份有限公司",
       "index": "NYSE FactSet全球綠能ESG指數",
@@ -1074,7 +1074,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000921",
+      "code": "00921",
       "name": "兆豐龍頭等權重",
       "issuer": "兆豐國際證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣產業龍頭存股等權重指數",
@@ -1089,7 +1089,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000922",
+      "code": "00922",
       "name": "國泰台灣領袖50",
       "issuer": "國泰證券投資信託股份有限公司",
       "index": "MSCI台灣領袖50精選指數",
@@ -1104,7 +1104,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000923",
+      "code": "00923",
       "name": "群益台ESG低碳50(原簡稱:群益台灣ESG低碳)",
       "issuer": "群益證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣ESG低碳50指數",
@@ -1119,7 +1119,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000924",
+      "code": "00924",
       "name": "復華S&P500成長",
       "issuer": "復華證券投資信託股份有限公司",
       "index": "標普500成長指數",
@@ -1134,7 +1134,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000926",
+      "code": "00926",
       "name": "凱基全球菁英55",
       "issuer": "凱基證券投資信託股份有限公司",
       "index": "彭博全球菁英55指數",
@@ -1149,7 +1149,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000927",
+      "code": "00927",
       "name": "群益半導體收益",
       "issuer": "群益證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃半導體收益指數",
@@ -1164,7 +1164,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000929",
+      "code": "00929",
       "name": "復華台灣科技優息",
       "issuer": "復華證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃科技優息指數",
@@ -1179,7 +1179,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000930",
+      "code": "00930",
       "name": "永豐ESG低碳高息",
       "issuer": "永豐證券投資信託股份有限公司",
       "index": "特選臺灣上市上櫃ESG低碳高息40指數",
@@ -1194,7 +1194,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000932",
+      "code": "00932",
       "name": "兆豐永續高息等權",
       "issuer": "兆豐國際證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃ESG永續高股息等權重指數",
@@ -1209,7 +1209,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000934",
+      "code": "00934",
       "name": "中信成長高股息",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃優選成長高股息指數",
@@ -1224,7 +1224,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000935",
+      "code": "00935",
       "name": "野村臺灣新科技50",
       "issuer": "野村證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃FactSet創新科技50指數",
@@ -1239,7 +1239,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000936",
+      "code": "00936",
       "name": "台新永續高息中小",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃永續高息中小型股指數",
@@ -1254,7 +1254,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000938",
+      "code": "00938",
       "name": "凱基優選30",
       "issuer": "凱基證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃優選多因子30指數",
@@ -1269,7 +1269,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000939",
+      "code": "00939",
       "name": "統一台灣高息動能",
       "issuer": "統一證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃高息動能指數",
@@ -1284,7 +1284,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000940",
+      "code": "00940",
       "name": "元大台灣價值高息",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣價值高息指數",
@@ -1299,7 +1299,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000941",
+      "code": "00941",
       "name": "中信上游半導體",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE Factset上游半導體指數",
@@ -1314,7 +1314,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000943",
+      "code": "00943",
       "name": "兆豐電子高息等權",
       "issuer": "兆豐國際證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃電子成長高息等權重指數",
@@ -1329,7 +1329,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000944",
+      "code": "00944",
       "name": "野村趨勢動能高息",
       "issuer": "野村證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃FactSet臺灣趨勢動能高股息指數",
@@ -1344,7 +1344,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000946",
+      "code": "00946",
       "name": "群益科技高息成長",
       "issuer": "群益證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃科技高息成長指數",
@@ -1359,7 +1359,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000947",
+      "code": "00947",
       "name": "台新臺灣IC設計",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃IC設計動能指數",
@@ -1374,7 +1374,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000949",
+      "code": "00949",
       "name": "復華日本龍頭",
       "issuer": "復華證券投資信託股份有限公司",
       "index": "NYSE FactSet 日本護城河優勢龍頭企業指數",
@@ -1389,7 +1389,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000951",
+      "code": "00951",
       "name": "台新日本半導體",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "NYSE FactSet 日本半導體指數",
@@ -1404,7 +1404,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000952",
+      "code": "00952",
       "name": "凱基台灣AI 50",
       "issuer": "凱基證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃FactSet優選AI 50指數",
@@ -1419,7 +1419,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000954",
+      "code": "00954",
       "name": "中信日本半導體",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE FactSet 日本半導體指數",
@@ -1434,7 +1434,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000956",
+      "code": "00956",
       "name": "中信日經高股息",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "日經高股息 50指數",
@@ -1449,7 +1449,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000960",
+      "code": "00960",
       "name": "野村全球航運龍頭",
       "issuer": "野村證券投資信託股份有限公司",
       "index": "NYSE FactSet全球航運龍頭息收指數",
@@ -1464,7 +1464,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000961",
+      "code": "00961",
       "name": "FT臺灣永續高息",
       "issuer": "富蘭克林華美證券投資信託股份有限公司",
       "index": "ICE臺灣ESG高息指數",
@@ -1479,7 +1479,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000962",
+      "code": 00962",
       "name": "台新AI優息動能",
       "issuer": "台新證券投資信託股份有限公司",
       "index": "臺灣指數公司特選臺灣上市上櫃AI優息動能指數",
@@ -1494,7 +1494,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000963",
+      "code": "00963",
       "name": "中信全球高股息",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE全球特選高股息自由現金流指數",
@@ -1509,7 +1509,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000964",
+      "code": "00964",
       "name": "中信亞太高股息",
       "issuer": "中國信託證券投資信託股份有限公司",
       "index": "NYSE亞太高股息指數",
@@ -1524,7 +1524,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000965",
+      "code": "00965",
       "name": "元大航太防衛科技",
       "issuer": "元大證券投資信託股份有限公司",
       "index": "NYSE FactSet全球航太與防衛科技指數",
@@ -1539,7 +1539,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000971",
+      "code": "00971",
       "name": "野村美國研發龍頭",
       "issuer": "野村證券投資信託股份有限公司",
       "index": "彭博研發龍頭指數",
@@ -1554,7 +1554,7 @@
       "source": "user-provided-twse-spreadsheet"
     },
     {
-      "code": "000972",
+      "code": "00972",
       "name": "野村日本動能高息",
       "issuer": "野村證券投資信託股份有限公司",
       "index": "彭博日本價值動能高息指數",
