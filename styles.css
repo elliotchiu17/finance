@@ -35,3 +35,25 @@
 @media(max-width:650px){.editor-type-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fee-pair{grid-template-columns:1fr}}
 
 .data-table td.etf-name-col{white-space:normal;min-width:160px;max-width:235px;width:205px}
+
+/* V1.6: spacing, table controls and personal watchlist collections */
+#group-add-toggle{display:inline-flex;margin-top:16px;margin-bottom:2px;position:relative;vertical-align:middle}
+.prefix-tabs{row-gap:12px;column-gap:8px;align-items:flex-start}
+.catalog-orderbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:#7b8679;font-size:12px;padding:0 24px 15px}
+.catalog-orderbar .soft-btn{font-size:12px;padding:7px 12px}
+.data-table .etf-drag{cursor:grab;touch-action:none;background:transparent;border:0;color:#8c9d89;font-size:22px;padding:2px 6px}
+.data-table .etf-drag:active{cursor:grabbing}
+.data-table tr.etf-dragging{opacity:.55;background:#dbe6d6}
+.data-table tr.etf-drag-over td{box-shadow:inset 0 3px #7b9c7b}
+.data-table td.row-edit{padding-left:7px;padding-right:7px}
+.data-table td.row-edit button{white-space:nowrap}
+.watch-group-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.watch-group-toolbar label{display:flex;align-items:center;gap:8px;font-weight:700;color:#5b6b60}
+.watch-group-toolbar select{padding:9px 12px;border:1px solid #d2cfbf;background:#faf6e9;border-radius:10px;max-width:220px;color:var(--ink)}
+.watch-group-toolbar .soft-btn{font-size:12px;padding:9px 12px}
+.watch-picker-panel{width:min(460px,96vw);max-height:90vh;overflow:auto}
+.picker-options{display:grid;gap:9px;margin:17px 0}
+.picker-option{display:flex;gap:11px;align-items:center;padding:12px;border:1px solid var(--line);background:#f8f3e7;border-radius:12px;font-size:14px;font-weight:650}
+.picker-option input{accent-color:#69836e;width:17px;height:17px}
+.watch-picker-panel .editor-actions{display:flex;gap:10px;margin-top:18px}
+@media(max-width:720px){.catalog-orderbar{padding:0 16px 14px}.watch-group-toolbar label{width:100%}.watch-group-toolbar select{flex:1;max-width:none}}
