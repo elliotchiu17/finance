@@ -57,3 +57,14 @@
 .picker-option input{accent-color:#69836e;width:17px;height:17px}
 .watch-picker-panel .editor-actions{display:flex;gap:10px;margin-top:18px}
 @media(max-width:720px){.catalog-orderbar{padding:0 16px 14px}.watch-group-toolbar label{width:100%}.watch-group-toolbar select{flex:1;max-width:none}}
+
+/* V1.7: status chips, portfolio form and Google sign-in */
+.status-label{display:inline-block;font-size:11px;padding:3px 9px;border-radius:30px;margin-top:5px;color:#695d47;background:#ece2c9}
+.status-soonDelist{background:#f6dede;color:#824d4d}.status-unknown{background:#e4e5df;color:#5e655f}
+.cloud-actions{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.cloud-actions button{flex:1 1 auto}
+.cloud-side-status{font-size:11px;color:#7b8a7c;padding:12px 14px;line-height:1.5}
+.holdings-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 24px;align-items:end}
+.holdings-form label{display:grid;gap:7px;font-size:12px;font-weight:700;color:#607263}.holdings-form input{min-width:0;width:100%;padding:12px 10px;background:#faf7ed;border:1px solid #d6d4c7;border-radius:10px;color:#34463a}
+.holdings-table{min-width:780px}.holdings-table td{font-size:13px}
+.editor-form select{width:100%;border:1px solid #d5d3c4;border-radius:11px;background:#faf7ec;padding:11px;color:#35483a;font:inherit}
+@media(max-width:900px){.holdings-form{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.holdings-form{grid-template-columns:1fr}}
