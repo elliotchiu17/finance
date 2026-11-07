@@ -39,6 +39,10 @@
 /* V1.6: spacing, table controls and personal watchlist collections */
 #group-add-toggle,
 #group-manage-toggle {display: inline-flex;align-items: center;vertical-align: middle;position: relative;margin-top: 18px;margin-bottom: 0;}
+/* 兩個分類管理按鈕之間的間距 */
+#group-manage-toggle {
+  margin-left: 14px;
+}
 .prefix-tabs{row-gap:12px;column-gap:8px;align-items:flex-start}
 .catalog-orderbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:#7b8679;font-size:12px;padding:0 24px 15px}
 .catalog-orderbar .soft-btn{font-size:12px;padding:7px 12px}
