@@ -68,3 +68,9 @@
 .holdings-table{min-width:780px}.holdings-table td{font-size:13px}
 .editor-form select{width:100%;border:1px solid #d5d3c4;border-radius:11px;background:#faf7ec;padding:11px;color:#35483a;font:inherit}
 @media(max-width:900px){.holdings-form{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.holdings-form{grid-template-columns:1fr}}
+
+/* V1.8: self-managed symbol groups */
+.group-manager{margin-top:14px;padding:16px;border-radius:14px;background:rgba(255,255,255,.42);border:1px solid rgba(80,100,80,.16)}
+.group-manager h3{font-size:1rem;margin:0 0 12px}.group-manage-row{display:flex;gap:8px;align-items:center;padding:10px 0;border-top:1px solid rgba(80,100,80,.12)}
+.group-manage-row span{flex:1}.group-manage-row small{display:block;color:#7f897d}.group-manager.hidden{display:none}
+@media(max-width:650px){.group-manage-row{flex-wrap:wrap}.group-manage-row span{flex-basis:100%}}
