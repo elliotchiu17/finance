@@ -37,12 +37,7 @@
 .data-table td.etf-name-col{white-space:normal;min-width:160px;max-width:235px;width:205px}
 
 /* V1.6: spacing, table controls and personal watchlist collections */
-#group-add-toggle,
-#group-manage-toggle {display: inline-flex;align-items: center;vertical-align: middle;position: relative;margin-top: 18px;margin-bottom: 0;}
-/* 兩個分類管理按鈕之間的間距 */
-#group-manage-toggle {
-  margin-left: 14px;
-}
+#group-add-toggle{display:inline-flex;margin-top:16px;margin-bottom:2px;position:relative;vertical-align:middle}
 .prefix-tabs{row-gap:12px;column-gap:8px;align-items:flex-start}
 .catalog-orderbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:#7b8679;font-size:12px;padding:0 24px 15px}
 .catalog-orderbar .soft-btn{font-size:12px;padding:7px 12px}
@@ -79,3 +74,17 @@
 .group-manager h3{font-size:1rem;margin:0 0 12px}.group-manage-row{display:flex;gap:8px;align-items:center;padding:10px 0;border-top:1px solid rgba(80,100,80,.12)}
 .group-manage-row span{flex:1}.group-manage-row small{display:block;color:#7f897d}.group-manager.hidden{display:none}
 @media(max-width:650px){.group-manage-row{flex-wrap:wrap}.group-manage-row span{flex-basis:100%}}
+
+/* V1.9: public visitor presentation and private author controls */
+.guest-mode .private-ui,.guest-mode .edit-ui,.guest-mode .row-edit,.guest-mode .etf-drag,.guest-mode .watch-star,.guest-mode #new-etf-form,.guest-mode #group-manager,.guest-mode #prefix-group-manage,.guest-mode #manage-group-toggle{display:none!important}
+.guest-mode .home-lower{display:none}
+.status-chips{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-top:5px}.status-chips .status-label{margin:0}.status-date{background:#e3eadd;color:#58715e}
+#clip-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:18px;align-items:start}
+.clip-card{position:relative;overflow:hidden;border:1px solid #d9d4c5;background:#f8f4e8;border-radius:18px;box-shadow:0 8px 19px rgba(66,67,50,.08)}
+.clip-photo{aspect-ratio:1/1;background:#e3e9d8;display:flex;align-items:center;justify-content:center;overflow:hidden}.clip-photo img{height:100%;width:100%;object-fit:cover}.clip-placeholder{flex-direction:column;color:#829381}.clip-placeholder span{font-size:58px}.clip-placeholder small{letter-spacing:.2em;font-size:10px}
+.clip-copy{padding:18px 19px 22px;min-width:0}.clip-kicker{font-size:10px;letter-spacing:.1em;color:#899789}.clip-copy h3{font-size:18px;margin:9px 0;color:#3d4d41}.clip-copy p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.75;max-height:17.5em;overflow:auto;font-size:14px}.clip-copy small{color:#889487}
+.clip-delete{position:absolute;top:10px;right:10px;z-index:2;border:0;background:#faf7ed;border-radius:50%;width:30px;height:30px;cursor:pointer;color:#647464}
+.held-drag{border:0;background:transparent;color:#91a08e;font-size:22px;cursor:grab;touch-action:none}.held-row.dragging{opacity:.6;background:#e4ebdb}.holdings-table{min-width:880px}
+@media(max-width:700px){#clip-list{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}}
+
+.guest-mode #group-add-form,.guest-mode #group-add-toggle,.guest-mode #group-manage-toggle{display:none!important}
