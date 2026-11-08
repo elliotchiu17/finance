@@ -88,3 +88,24 @@
 @media(max-width:700px){#clip-list{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}}
 
 .guest-mode #group-add-form,.guest-mode #group-add-toggle,.guest-mode #group-manage-toggle{display:none!important}
+
+/* ETF 代號分類按鈕排列修正 */
+.group-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+#group-add-toggle,
+#group-manage-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  min-height: 46px;
+}
