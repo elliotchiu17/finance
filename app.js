@@ -3,7 +3,7 @@
 const KEY='komorebi-proto-v1';
 let cloudReady=false, cloudConfigured=false, cloudUser=null, cloudSaving=false, publicPublished=false, publicSnapshot=null, publicReady=false, publicDirty=false;
 const seed=[];
-const indices=[['TAIWAN','台灣加權指數'],['UNITED STATES','S&P 500'],['UNITED STATES','NASDAQ'],['UNITED STATES','道瓊工業指數'],['UNITED STATES','費城半導體'],['JAPAN','日經 225'],['SOUTH KOREA','KOSPI'],['EUROPE','EURO STOXX 50'],['HONG KONG','恆生指數']];
+const indices=[['TAIWAN','台灣加權指數'],['TAIWAN FUTURES','台指期（日／夜盤）'],['UNITED STATES','S&P 500'],['UNITED STATES','NASDAQ'],['UNITED STATES','道瓊工業指數'],['UNITED STATES','費城半導體'],['JAPAN','日經 225'],['SOUTH KOREA','KOSPI'],['EUROPE','EURO STOXX 50']];
 function load(){try{const v=JSON.parse(localStorage.getItem(KEY)||'{}');return {watch:Array.isArray(v.watch)?v.watch:['0050','00878','00919'],custom:Array.isArray(v.custom)?v.custom:[],note:typeof v.note==='string'?v.note:'',clips:Array.isArray(v.clips)?v.clips:[],groups:Array.isArray(v.groups)?v.groups:[],bankOverrides:v.bankOverrides&&typeof v.bankOverrides==='object'?v.bankOverrides:{},edits:v.edits&&typeof v.edits==='object'?v.edits:{},hiddenCodes:Array.isArray(v.hiddenCodes)?v.hiddenCodes:[],watchGroups:Array.isArray(v.watchGroups)?v.watchGroups:[],etfOrder:Array.isArray(v.etfOrder)?v.etfOrder:[],placements:v.placements&&typeof v.placements==='object'?v.placements:{},holdings:Array.isArray(v.holdings)?v.holdings:[]}}catch{return {watch:['0050','00878','00919'],custom:[],note:'',clips:[],groups:[],bankOverrides:{},edits:{},hiddenCodes:[],watchGroups:[],etfOrder:[],placements:{},holdings:[]}}}
 let state=window.KOMOREBI_FIREBASE_CONFIG?.projectId?{watch:[],custom:[],note:'',clips:[],groups:[],bankOverrides:{},edits:{},hiddenCodes:[],watchGroups:[],etfOrder:[],placements:{},holdings:[],memos:{}}:load();
 // 修復舊版 000639 → 00639 的資料、收藏及個人修正紀錄。
@@ -47,8 +47,8 @@ async function loadCatalog(){
   setCatalog(data.items,'已載入 etf-data.json');catalogInfo=data.meta||{};
  }catch(err){$('catalog-status').textContent=`使用內建備援名錄（etf-data.json 讀取失敗：${err.message}）。商品仍可瀏覽和編輯。`;console.warn(err)}
 }
-function renderIndices(){$('indices').innerHTML=indices.map(([market,name])=>`<div class="index-card"><div class="market">${escapeHTML(market)}</div><div class="name">${escapeHTML(name)}</div><div class="value">—</div><div class="status">等待接入市場資料</div></div>`).join('')}
-function go(v){if(v==='personal'&&cloudConfigured&&!cloudUser){$('login-modal').classList.remove('hidden');return}activeView=v;document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id==='view-'+v));document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active',el.dataset.view===v));$('crumb').textContent={home:'總覽首頁',etf:'金融商品 · ETF',personal:'個人理財'}[v];window.scrollTo({top:0,behavior:'smooth'});if(v==='personal')renderWatch();if(v==='home')renderHomeWatch()}
+function renderIndices(){/* market-dashboard.js builds the nine live-ready cards */}
+function go(v){if(v==='personal'&&cloudConfigured&&!cloudUser){$('login-modal').classList.remove('hidden');return}activeView=v;document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id==='view-'+v));document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active',el.dataset.view===v));$('crumb').textContent={home:'總覽首頁',etf:'金融商品 · ETF',personal:'個人理財',calendar:'除息月曆'}[v];window.scrollTo({top:0,behavior:'smooth'});if(v==='personal')renderWatch();if(v==='home')renderHomeWatch()}
 function groups(){return [{id:'all',label:'全部'},{id:'004',label:'004xx'},{id:'005',label:'005xx'},{id:'006',label:'006xx'},{id:'007',label:'007xx'},{id:'008',label:'008xx'},{id:'009',label:'009xx'},...state.groups.map(g=>({id:g.id,label:g.label})),{id:'other',label:'其他代號'},{id:'new',label:'手動新增'}]}
 function renderPrefix(){if(!groups().some(g=>g.id===prefix))prefix='all';$('prefix-tabs').innerHTML=groups().map(g=>`<button class="prefix-btn ${prefix===g.id?'active':''}" data-prefix="${escapeHTML(g.id)}">${escapeHTML(g.label)}</button>`).join('')}
 function assignedGroup(e){const explicit=state.placements?.[e.code];if(explicit&&groups().some(g=>g.id===explicit))return explicit;
@@ -179,3 +179,6 @@ $('google-signin').addEventListener('click',()=>{if(!window.KomorebiCloud?.confi
 $('google-signout').addEventListener('click',()=>window.KomorebiCloud?.signOut());
 $('cloud-init').addEventListener('click',async()=>{if(!cloudUser||cloudReady)return;const current=load();if(!confirm('即將把此瀏覽器的本機編輯、觀察清單和筆記匯入空白 Firestore。請先按「匯出備份 JSON」。確定開始？'))return;await window.KomorebiCloud.initializeCloud(current)});
 refreshPrivateUI();renderIndices();renderETF();renderWatch();renderHomeWatch();renderClips();renderHeld();loadCatalog();
+
+window.KomorebiCalendarContext={allEtfs,assignedGroup,canEdit,go};
+window.addEventListener('komorebi-cloud',()=>window.dispatchEvent(new Event('komorebi-calendar-auth')));

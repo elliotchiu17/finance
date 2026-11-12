@@ -89,23 +89,15 @@
 
 .guest-mode #group-add-form,.guest-mode #group-add-toggle,.guest-mode #group-manage-toggle{display:none!important}
 
-/* ETF 代號分類按鈕排列修正 */
-.group-action-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-top: 22px;
-  margin-bottom: 8px;
-}
+/* V1.10 — calendar, market dashboard, responsive alignment */
+#group-add-toggle,#group-manage-toggle{margin:18px 8px 8px 0!important;vertical-align:middle;min-height:46px;transform:none!important}
+.prefix-tabs{margin-bottom:12px;row-gap:12px}
+.index-card .value{font-size:clamp(20px,2.3vw,30px);font-weight:800;color:#34483b;font-variant-numeric:tabular-nums;line-height:1.5}
+.market-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}.market-chip{border-radius:7px;padding:4px 8px;background:#e5e7da;font-weight:700;font-size:11px;color:#667369}
+.market-chip.up{background:#f2d8d6;color:#a34f50}.market-chip.down{background:#d5e4da;color:#437b62}.market-update{margin-top:9px;font-size:10px;color:#92958a}.market-disclaimer{font-size:11px;color:#7b857a;margin:11px 0 18px}
+.index-card .market{min-height:18px}.index-card .name{min-height:28px}
+.calendar-panel{padding:25px}.calendar-topline,.calendar-month-controls,.cal-filters,.cal-categories,.cal-cat-title{display:flex;gap:11px;align-items:center;flex-wrap:wrap}.calendar-topline{justify-content:space-between}.calendar-month-controls h2{min-width:135px;text-align:center}.calendar-month-controls .soft-btn{padding:6px 12px}.cal-filters{margin:18px 0}.cal-check{padding:9px 13px;background:#e5eadf;border-radius:13px;display:inline-flex;align-items:center;gap:8px;font-weight:700}.cal-check input,.cal-group-chip input{accent-color:#718772}.cal-search{margin-left:auto;color:#6c7b6e}.cal-search input{margin-left:7px;border:1px solid #d2d2c2;border-radius:10px;background:#fbf7ec;padding:8px 10px;max-width:170px}.cal-categories{display:block;margin-bottom:16px}.cal-cat-title{font-weight:700;margin-bottom:10px}.cal-cat-title .soft-btn{padding:6px 12px;font-size:12px}.cal-categories>div:last-child{display:flex;flex-wrap:wrap;gap:7px}.cal-group-chip{border:1px solid #d7d8c8;border-radius:25px;background:#f9f5e9;padding:5px 9px;display:inline-flex;align-items:center;gap:5px;font-size:12px}.cal-color-dot{height:12px;width:12px;border-radius:50%;border:1px solid #afb9aa}.cal-scroll{overflow-x:auto}.calendar-grid{min-width:710px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid #d6d3c7;border-left:1px solid #d6d3c7;border-radius:10px;overflow:hidden}.cal-weekday{background:#e4eadc;text-align:center;padding:11px;color:#667a6b;font-weight:800;border-right:1px solid #d6d3c7;border-bottom:1px solid #d6d3c7}.cal-day{min-height:130px;padding:8px 7px;background:#f9f5e9;border-right:1px solid #d6d3c7;border-bottom:1px solid #d6d3c7;min-width:0}.cal-day.outside{background:#ece9de;color:#a2a69a}.cal-day.today .cal-date{background:#6b896f;color:#fff;border-radius:50%;width:28px;height:28px;display:grid;place-items:center}.cal-date{font-weight:700;font-size:12px;margin-bottom:7px;height:28px}.cal-events{display:grid;gap:4px}.cal-event,.cal-more{width:100%;border:0;border-radius:7px;background:var(--event-bg,#d6dfd0);padding:5px 6px;color:#35453a;text-align:left;font-size:11px;line-height:1.5;overflow-wrap:anywhere;cursor:pointer}.cal-event:hover{filter:brightness(.93)}.cal-more{background:#e5e2d8;color:#74806f;text-align:center}.cal-modal{max-height:92vh;overflow:auto;width:min(660px,96vw);max-width:660px}.cal-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.cal-form label{display:grid;gap:5px;color:#5b705d;font-weight:700;font-size:12px}.cal-form input,.cal-form select{border:1px solid #d3d3c6;background:#faf6ed;border-radius:10px;padding:10px;color:#36493a;min-width:0;width:100%}.cal-form .cal-warning,.cal-form .editor-actions{grid-column:1/-1}.cal-warning{font-size:12px;line-height:1.8;color:#846a56;background:#f2e8d7;border-radius:9px;padding:10px}.cal-detail-panel{width:min(480px,95vw);max-width:480px}.cal-detail-banner{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:20px 0}.cal-detail-category{padding:5px 11px;border-radius:7px;font-size:12px}.cal-detail-amount{font-size:clamp(25px,4vw,44px);font-weight:800;color:#cf8654;margin:15px 0}.cal-detail-amount small,.cal-stock-amount{font-size:13px}.cal-detail-dates{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:20px 0}.cal-detail-dates>div{background:#e5e9dc;border-radius:10px;text-align:center;padding:12px 6px}.cal-detail-dates small{display:block;color:#728072;font-size:11px}.cal-detail-dates strong{font-size:12px;white-space:nowrap}.cal-note{color:#777f72;font-size:12px;line-height:1.8;margin:10px 0}.cal-detail-panel .editor-actions{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:700px){.calendar-panel{padding:15px}.calendar-topline{align-items:start}.cal-search{margin-left:0;width:100%}.cal-search input{max-width:100%;width:min(300px,80%)}.cal-form{grid-template-columns:1fr}.cal-detail-dates{grid-template-columns:1fr 1fr 1fr}.cal-day{min-height:105px}}
+@media(max-width:390px){.indices{grid-template-columns:repeat(2,minmax(0,1fr))}.index-card{padding:11px}.index-card .name{font-size:12px}.market-chip{font-size:10px;padding:3px 5px}}
 
-#group-add-toggle,
-#group-manage-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  position: relative;
-  vertical-align: middle;
-  min-height: 46px;
-}
+.cal-day-popup-wrap{position:fixed;inset:0;z-index:230;background:rgba(30,45,34,.5);display:flex;align-items:center;justify-content:center;padding:20px}.cal-day-popup{max-height:80vh;overflow:auto;width:min(440px,96vw);background:#f4efdf;border-radius:18px;padding:22px;box-shadow:0 18px 48px rgba(35,40,30,.3)}.cal-day-popup-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:12px}.cal-day-popup-item{display:block;width:100%;background:#e5eadf;border:1px solid #ced9c9;text-align:left;padding:10px 12px;margin:5px 0;border-radius:10px;color:#405548}
