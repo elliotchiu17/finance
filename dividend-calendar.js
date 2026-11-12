@@ -20,12 +20,60 @@ function renderGroups(){const groups=meta();$('cal-categories').innerHTML=groups
 function render(){const y=month.getFullYear(),m=month.getMonth(),first=new Date(y,m,1),offset=first.getDay(),last=new Date(y,m+1,0).getDate();$('cal-month-title').textContent=`${y} 年 ${m+1} 月`;
  const showEtf=$('cal-show-etf').checked,showStock=$('cal-show-stock').checked,query=$('cal-search').value.trim().toLowerCase();let visible=events.filter(e=>(e.kind==='etf'?showEtf:showStock)&&!enabledGroups.has(groupOf(e))&&(e.code+' '+e.name).toLowerCase().includes(query));const grouped=new Map();for(const e of visible){const arr=grouped.get(e.exDate)||[];arr.push(e);grouped.set(e.exDate,arr)};
  let html=days.map(d=>`<div class="cal-weekday">${d}</div>`).join('');const cells=Math.ceil((offset+last)/7)*7;
- for(let c=0;c<cells;c++){const dt=new Date(y,m,1-offset+c),inside=dt.getMonth()===m,date=dateParts(dt),today=date===dateParts(new Date());const items=(grouped.get(date)||[]).slice().sort((a,b)=>a.code.localeCompare(b.code));html+=`<div class="cal-day ${inside?'':'outside'} ${today?'today':''}" data-date="${date}"><div class="cal-date">${dt.getDate()}</div><div class="cal-events">${items.slice(0,4).map(e=>{const g=groupObj(e);const title = e.kind === 'etf'? `${e.code}｜${e.frequency || '未確認'}` : `${e.code}`;`${e.code} ${e.name} · ${e.frequency||'未確認'}`:`${e.code} ${e.name}`;return `<button type="button" class="cal-event" data-event="${safe(e.id)}" style="--event-bg:${g.color}" title="${safe(title)}">${safe(title)}</button>`}).join('')}${items.length>4?`<button type="button" class="cal-more" data-date-more="${date}">另有 ${items.length-4} 筆</button>`:''}</div></div>`}
+ for(let c=0;c<cells;c++){const dt=new Date(y,m,1-offset+c),inside=dt.getMonth()===m,date=dateParts(dt),today=date===dateParts(new Date());const items=(grouped.get(date)||[]).slice().sort((a,b)=>a.code.localeCompare(b.code));html+=`<div class="cal-day ${inside?'':'outside'} ${today?'today':''}" data-date="${date}"><div class="cal-date">${dt.getDate()}</div><div class="cal-events">${items.slice(0,4).map(e=>{const g=groupObj(e);const title=e.kind==='etf'?`${e.code}｜${e.frequency||'未確認'}`:`${e.code}`;return `<button type="button" class="cal-event" data-event="${safe(e.id)}" style="--event-bg:${g.color}" title="${safe(title)}">${safe(title)}</button>`}).join('')}${items.length>4?`<button type="button" class="cal-more" data-date-more="${date}">另有 ${items.length-4} 筆</button>`:''}</div></div>`}
  $('calendar-grid').innerHTML=html;renderGroups();}
 function openEditor(e){if(!isAdmin())return alert('請先使用管理員帳號登入並完成雲端載入');$('cal-event-form').reset();$('cal-event-id').value=e?.id||'';$('cal-editor-title').textContent=e?'編輯除息事件':'新增除息事件';$('cal-kind').value=e?.kind||'etf';updateKind();$('cal-code').value=e?.code||'';$('cal-name').value=e?.name||'';if(e?.group)$('cal-group').value=e.group;$('cal-ex').value=e?.exDate||'';$('cal-buy').value=e?.lastBuyDate||'';$('cal-pay').value=e?.payDate||'';$('cal-frequency').value=e?.frequency||'未確認';$('cal-dividend').value=e?.dividend??'';$('cal-cash').value=e?.cash??'';$('cal-stock').value=e?.stock??'';$('cal-delete').classList.toggle('hidden',!e);$('cal-editor-overlay').classList.remove('hidden')}
 function updateKind(){const stock=$('cal-kind').value==='stock';$('cal-frequency-row').classList.toggle('hidden',stock);$('cal-etf-dividend-row').classList.toggle('hidden',stock);$('cal-cash-dividend-row').classList.toggle('hidden',!stock);$('cal-stock-dividend-row').classList.toggle('hidden',!stock);renderGroups()}
-function detail(e){selected=e;$('cal-detail-title').textContent=`${e.code}｜${e.name}`;const g=groupObj(e);$('cal-detail-content').innerHTML=`<div class="cal-detail-banner"><span style="background:${g.color}" class="cal-detail-category">${safe(g.name)}</span><strong>${e.kind==='etf'?'ETF 配息資訊':'股票除權息資訊'}</strong></div><div class="cal-detail-amount">${e.kind==='etf'?`${e.dividend===''||e.dividend==null?'未填寫':safe(e.dividend)} <small>元／單位</small>`:`現金 ${e.cash===''||e.cash==null?'未填寫':safe(e.cash)} 元／股<br><span class="cal-stock-amount">股票股利 ${e.stock===''||e.stock==null?'未填寫':safe(e.stock)} 元／股</span>`}</div><div class="cal-detail-dates">${[['最後買進日',e.lastBuyDate],['除息日',e.exDate],['股利發放日',e.payDate]].map(([a,b])=>`<div><small>${a}</small><strong>${safe(b||'未定')}</strong></div>`).join('')}</div>${e.kind==='etf'?`<p class="cal-note">配息頻率：${safe(e.frequency||'未確認')}</p>`:''}<p class="cal-note">資訊由管理員手動維護，實際請以交易所及發行機構公告為準。</p>`;
- $('cal-detail-edit').classList.toggle('hidden',!isAdmin());$('cal-detail-go').classList.toggle('hidden',e.kind!=='etf');$('cal-detail-overlay').classList.remove('hidden')}
+function detail(e) {
+  selected = e;
+  $('cal-detail-title').textContent = `${e.code}｜${e.name}`;
+  const g = groupObj(e);
+  // 配息頻率的顏色與 ETF 代號分類無關。
+  const frequencyColors = {
+    '月配': '#D7E6D0',
+    '雙月配': '#D2E2E9',
+    '季配': '#F0DEBF',
+    '半年配': '#E5D7E9',
+    '年配': '#E9D5D0',
+    '不定期配': '#DDDAD0',
+    'N/A': '#E5E3DC',
+    '未確認': '#E5E3DC'
+  };
+  const frequency = e.frequency || '未確認';
+  const frequencyColor = frequencyColors[frequency] || '#E5E3DC';
+  const shortDate = value => {
+    if (!value) return '未定';
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    return m ? `${m[2]}.${m[3]}` : value;
+  };
+  const amount = e.kind === 'etf'
+    ? `<div class="cal-amount-caption">每單位配息金額</div>
+       <div class="cal-amount-line">
+         <span class="cal-amount-number">${safe(e.dividend === '' || e.dividend == null ? '未填寫' : e.dividend)}</span>
+         <span class="cal-amount-unit">元／單位</span>
+       </div>`
+    : `<div class="cal-stock-dividends">
+         <div>現金股利：${safe(e.cash === '' || e.cash == null ? '未填寫' : e.cash)} 元／股</div>
+         <div>股票股利：${safe(e.stock === '' || e.stock == null ? '未填寫' : e.stock)} 元／股</div>
+       </div>`;
+  $('cal-detail-content').innerHTML = `
+    <div class="cal-detail-banner">
+      <div class="cal-detail-badges">
+        <span class="cal-detail-category" style="background:${g.color}">${safe(g.name)}</span>
+        ${e.kind === 'etf' ? `<span class="cal-detail-frequency" style="background:${frequencyColor}">${safe(frequency)}</span>` : ''}
+      </div>
+      <strong>${e.kind === 'etf' ? 'ETF 配息資訊' : '股票除權息資訊'}</strong>
+    </div>
+    <div class="cal-detail-amount">${amount}</div>
+    <div class="cal-detail-dates">
+      ${[['最後買進日', e.lastBuyDate], ['除息日', e.exDate], ['股利發放日', e.payDate]]
+        .map(([label, date]) => `<div><small>${label}</small><strong>${safe(shortDate(date))}</strong></div>`).join('')}
+    </div>
+    <p class="cal-note">資訊由管理員手動維護，實際請以交易所及發行機構公告為準。</p>`;
+  $('cal-detail-edit').classList.toggle('hidden', !isAdmin());
+  $('cal-detail-go').classList.toggle('hidden', e.kind !== 'etf');
+  $('cal-detail-overlay').classList.remove('hidden');
+}
 $('cal-prev').addEventListener('click',()=>{month=new Date(month.getFullYear(),month.getMonth()-1,1);render()});$('cal-next').addEventListener('click',()=>{month=new Date(month.getFullYear(),month.getMonth()+1,1);render()});$('cal-today').addEventListener('click',()=>{month=new Date(new Date().getFullYear(),new Date().getMonth(),1);render()});
 ['cal-show-etf','cal-show-stock','cal-search'].forEach(id=>$(id).addEventListener('input',render));
 $('cal-categories').addEventListener('change',e=>{const id=e.target.dataset.calGroup;if(!id)return;if(e.target.checked)enabledGroups.delete(id);else enabledGroups.add(id);render()});
