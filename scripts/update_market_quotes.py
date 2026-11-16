@@ -95,7 +95,8 @@ def make_record(price: float, day: str, source: str, change: float | None = None
             'source': source, 'symbol': symbol, 'note': note}
 
 
-def twse() -> dict:
+def twse_openapi() -> dict:
+    """Official open-data fallback; this feed can lag behind the daily report."""
     data = request_json('https://openapi.twse.com.tw/v1/exchangeReport/MI_INDEX')
     if not isinstance(data, list): raise ValueError('unexpected TWSE data')
     rows = [r for r in data if isinstance(r, dict) and r.get('指數') == '發行量加權股價指數']
@@ -106,8 +107,58 @@ def twse() -> dict:
     if sign not in ('+', '-', '－', '−', 'X', 'x', ''):
         raise ValueError(f'unknown TWSE sign {sign!r}')
     if sign in ('X','x'): change = None
-    return make_record(number(row['收盤指數']), date_roc(row['日期']),
+    day = date_roc(row['日期'])
+    if not finalized(day, 'Asia/Taipei', (15, 0)):
+        raise ValueError('TAIEX closing report not yet final')
+    return make_record(number(row['收盤指數']), day,
                        '臺灣證券交易所', change, symbol='TAIEX')
+
+
+def twse_monthly() -> dict:
+    """TWSE published daily index closes; use two rows for previous-close change.
+
+    This is the official monthly *historical closing index* JSON report, not an
+    intraday quote. Prefer it because the MI_INDEX OpenAPI may lag one day.
+    """
+    taipei_now = NOW.astimezone(TZ)
+    months = [taipei_now.date().replace(day=1)]
+    first = months[0]
+    months.append((first - dt.timedelta(days=1)).replace(day=1))
+    bars = []
+    for month in months:
+        query = urllib.parse.urlencode({
+            'date': month.strftime('%Y%m%d'), 'response': 'json'
+        })
+        payload = request_json('https://www.twse.com.tw/indicesReport/MI_5MINS_HIST?' + query)
+        if not isinstance(payload, dict) or payload.get('stat') != 'OK':
+            raise ValueError('TWSE monthly index report unavailable')
+        for r in payload.get('data') or []:
+            if not isinstance(r, list) or len(r) < 5: continue
+            try:
+                day = date_roc(r[0])
+                close = number(r[4])
+                if close > 0: bars.append((day, close))
+            except (ValueError, TypeError): continue
+    bars = sorted(set(bars), reverse=True)
+    ready = [(d, p) for d, p in bars if finalized(d, 'Asia/Taipei', (15, 0))]
+    if not ready: raise ValueError('no completed TAIEX daily closing index')
+    day, close = ready[0]
+    prior = next((p for d, p in bars if d < day), None)
+    if prior is None: raise ValueError('previous TAIEX close unavailable')
+    return make_record(close, day, '臺灣證券交易所', previous=prior, symbol='TAIEX')
+
+
+def twse() -> dict:
+    """Choose newest verified official record; never fall back to a *newer* guess."""
+    candidates = []
+    for provider in (twse_monthly, twse_openapi):
+        try:
+            candidates.append(provider())
+        except Exception as exc:
+            print(f'TAIEX source {provider.__name__} unavailable: {type(exc).__name__}: {exc}')
+    if not candidates:
+        raise ValueError('all TWSE official closing-data sources unavailable')
+    return max(candidates, key=lambda x: x['marketDate'])
 
 
 def val(row, *needles):
@@ -140,7 +191,7 @@ def taifex() -> dict:
         if date_raw is None: continue
         day = date_roc(date_raw) if re.fullmatch(r'\d{7}', str(date_raw)) else iso_date(date_raw) if '-' in str(date_raw) else str(date_raw)
         if re.fullmatch(r'\d{8}', day): day = dt.date(int(day[:4]),int(day[4:6]),int(day[6:])).isoformat()
-        price_raw = val(row, 'Close', 'ClosePrice', '收盤價', '最後成交價')
+        price_raw = val(row, 'Last', 'Close', 'ClosePrice', '收盤價', '最後成交價')
         try: price = number(price_raw)
         except (ValueError,TypeError): continue
         if price <= 0: continue
