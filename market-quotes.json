@@ -1,5 +1,15 @@
 {
-  "updatedAt": null,
-  "items": {},
-  "notice": "No licensed market data feed configured. Dashboard intentionally displays dashes until configured."
+  "updatedAt": "2026-11-16T14:51:12+00:00",
+  "items": {
+    "TAIEX": {
+      "price": 43675.12,
+      "marketDate": "2026-11-13",
+      "change": 583.25,
+      "changePct": 1.3535,
+      "source": "臺灣證券交易所",
+      "symbol": "TAIEX",
+      "note": ""
+    }
+  },
+  "notice": "Market dates are local exchange trading dates; verify provider display rights."
 }
