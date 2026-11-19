@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-19T01:23:28+00:00",
+  "updatedAt": "2026-11-19T19:07:27+00:00",
   "items": {
     "TAIEX": {
-      "price": 40194.91,
-      "marketDate": "2026-11-18",
-      "change": 102.8,
-      "changePct": 0.2564,
+      "price": 38426.89,
+      "marketDate": "2026-11-19",
+      "change": -1768.02,
+      "changePct": -4.3986,
       "source": "臺灣證券交易所",
       "symbol": "TAIEX",
       "note": ""
