@@ -1,0 +1,74 @@
+/* Komorebi v11-2 - readability first. Loaded AFTER styles.css to preserve user's customized type. */
+:root{--v112-berry:#F8C5D6;--v112-rose:#FACFE1;--v112-leaf:#CFE9BC;--v112-mint:#CCE9D8;--v112-ink:#334438}
+/* Side navigation */
+.sidebar .nav-item{font-size:clamp(16px,1.2vw,18px);min-height:53px;padding:13px 13px;font-weight:750;line-height:1.4}
+.sidebar .nav-item span{font-size:22px;flex-shrink:0}
+.sidebar .side-caption.secondary-label{font-size:14px;font-weight:800;letter-spacing:.12em;margin-top:23px}
+.sidebar .future-nav>div{font-size:16px;line-height:1.5;min-height:53px;display:flex;align-items:center;gap:8px;padding:10px 13px}
+.sidebar .future-nav small{font-size:13px;margin-left:auto;white-space:nowrap}
+.sidebar-bottom .muted{font-size:16px;line-height:1.85}
+/* Navigation hints and home header */
+.topbar .breadcrumb{font-size:clamp(14px,1.15vw,17px);font-weight:750;letter-spacing:.035em;line-height:1.5}
+.hero .eyebrow{font-size:clamp(15px,1.18vw,18px);font-weight:800;letter-spacing:.08em}
+.hero .pill-btn{font-size:18px;padding:13px 21px;min-height:49px;font-weight:800}
+/* Market hierarchy: country and index must be immediately legible */
+.indices .index-card{padding:clamp(20px,2.2vw,29px);min-width:0}
+.indices .index-card .market{font-size:clamp(15px,1.25vw,18px);font-weight:800;letter-spacing:.06em;line-height:1.4}
+.indices .index-card .name{font-size:clamp(21px,1.9vw,29px);line-height:1.38;font-weight:800;margin-top:14px;overflow-wrap:anywhere}
+.indices .index-card .value{font-size:clamp(35px,3.3vw,49px);line-height:1.24;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.indices .market-chip{font-size:clamp(14px,1.15vw,17px);padding:8px 11px;line-height:1.4;font-weight:800;white-space:normal}
+.indices .market-chip.up{background:#F7D8D7;color:#A34D51}
+.indices .market-chip.down{background:#D5EADC;color:#347A55}
+.indices .index-card:has(.market-chip.up) .value{color:#B35158}
+.indices .index-card:has(.market-chip.down) .value{color:#3F8561}
+.indices .market-update{font-size:11px}
+/* Calendar labels and day numbers: do not shrink at mobile breakpoints */
+.calendar-panel .cal-date{font-size:19px;min-height:30px;line-height:1.4}
+.calendar-panel .cal-day.today .cal-date{width:36px;height:36px}
+.calendar-panel .cal-weekday{font-size:16px}
+.calendar-panel .cal-group-chip{font-size:16px;font-weight:750;padding:9px 14px;min-height:43px}
+.calendar-panel .cal-group-chip input{width:17px;height:17px}
+.calendar-panel .cal-color-dot{width:15px;height:15px}
+.calendar-panel .cal-event{background:color-mix(in srgb,var(--event-bg,#D6DFD0) 78%,white)}
+.calendar-panel .cal-event,.calendar-panel .cal-more{font-size:14px;line-height:1.5;padding:8px 7px;min-height:35px;font-weight:750}
+.cal-day-popup .cal-day-popup-item{font-size:17px;line-height:1.5;padding:13px}
+.cal-detail-category,.cal-detail-frequency{font-size:16px}
+.cal-cat-title,.cal-check,.cal-search{font-size:16px}
+.cal-form label,.cal-form input,.cal-form select{font-size:16px}
+.cal-form label small{font-size:13px;font-weight:400;line-height:1.6}
+.cal-detail-dates small{font-size:20px}
+.cal-detail-dates strong{font-size:26px}
+/* Reference website board, inspired by a large editorial tile layout */
+.v112-ref-panel .panel-top{align-items:center}
+.v112-ref-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:23px}
+.v112-ref-card{background:#F9F6ED;border:1px solid #D6D8CB;border-radius:17px;box-shadow:0 7px 20px rgba(71,81,66,.065);position:relative;min-width:0;transition:transform .2s,box-shadow .2s}
+.v112-ref-card:hover{transform:translateY(-3px);box-shadow:0 13px 27px rgba(71,81,66,.12)}
+.v112-ref-link{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;text-decoration:none;color:#334638;min-height:270px;padding:26px 25px 30px;gap:16px}
+.v112-ref-link:focus-visible{outline:3px solid #73936e;outline-offset:3px}
+.v112-ref-n{color:#819282;letter-spacing:.16em;font-size:13px;font-weight:800}
+.v112-ref-link strong{font-size:clamp(25px,2.8vw,38px);font-weight:850;line-height:1.35;overflow-wrap:anywhere}
+.v112-ref-desc{color:#5f7062;font-size:clamp(16px,1.45vw,20px);line-height:1.7;max-width:32ch;white-space:pre-wrap;overflow-wrap:anywhere}
+.v112-ref-arrow{font-size:17px;font-weight:800;color:#628e65;margin-top:10px}
+.v112-ref-edit{position:absolute;top:12px;right:12px;border:1px solid #c9d5c6;border-radius:10px;background:#E4ECDf;color:#3f5942;padding:8px 13px;cursor:pointer;font-size:15px;font-weight:750}
+.v112-ref-empty{grid-column:1/-1;font-size:17px;text-align:center;padding:50px 15px;color:#7c8979}
+.v112-ref-modal{width:min(540px,94vw)}
+.v112-ref-form{display:grid;gap:18px;margin-top:20px}
+.v112-ref-form label{display:grid;gap:8px;font-size:16px;font-weight:750;color:#4a634e}
+.v112-ref-form input,.v112-ref-form textarea{min-width:0;width:100%;border:1px solid #c9d3c4;background:#fbf8ef;border-radius:11px;padding:12px 14px;color:#35483a;font:inherit;font-weight:450}
+@media(max-width:1050px){.v112-ref-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){
+ .sidebar .nav{gap:8px}.sidebar .nav-item{font-size:16px;padding:12px 13px;min-height:46px}
+ .topbar .breadcrumb{font-size:14px;overflow-wrap:anywhere}
+ .indices{grid-template-columns:1fr!important;gap:14px}
+ .indices .index-card{padding:22px}
+ .indices .index-card .market{font-size:16px}
+ .indices .index-card .name{font-size:23px}
+ .indices .index-card .value{font-size:clamp(34px,8vw,48px)}
+ .indices .market-chip{font-size:15px;padding:7px 10px}
+ .calendar-panel .cal-day{min-height:122px}
+ .calendar-panel .cal-event{background:color-mix(in srgb,var(--event-bg,#D6DFD0) 78%,white)}
+.calendar-panel .cal-event,.calendar-panel .cal-more{font-size:14px}
+ .v112-ref-grid{grid-template-columns:1fr;gap:14px}
+ .v112-ref-link{min-height:230px;padding:26px 18px}
+ .v112-ref-link strong{font-size:28px}.v112-ref-desc{font-size:18px}
+}
