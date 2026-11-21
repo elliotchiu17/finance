@@ -76,7 +76,7 @@
 }
 
 /* v11-2 readability correction: compact market cards, one row for change amount + percentage */
-.indices{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.indices{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .indices .index-card{border-radius:24px}
 .indices .index-card .market-chips{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:12px}
 .indices .index-card .market-chip:first-child{flex-basis:100%;width:max-content;max-width:max-content}
@@ -84,6 +84,8 @@
 .guest-mode #catalog-status{display:none!important}
 /* ETF category visual language: distinct border, readable labels and soft green background */
 .calendar-panel .cal-cat-title{font-weight:750}
-@media(min-width:1200px){.indices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1101px){.indices{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:721px) and (max-width:1100px){.indices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.indices{grid-template-columns:1fr}}
 
 @media(max-width:390px){.indices{grid-template-columns:1fr!important}.indices .index-card .value{font-size:29px}.indices .market-chip{font-size:12px}}
