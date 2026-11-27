@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T19:45:32+00:00",
+  "updatedAt": "2026-11-27T05:16:33+00:00",
   "items": {
     "TAIEX": {
       "price": 39151.81,
@@ -11,10 +11,10 @@
       "note": ""
     },
     "TX": {
-      "price": 38062.0,
-      "marketDate": "2026-11-25",
-      "change": -2262.0,
-      "changePct": -5.6096,
+      "price": 39455.0,
+      "marketDate": "2026-11-26",
+      "change": 1332.0,
+      "changePct": 3.494,
       "source": "臺灣期貨交易所",
       "symbol": "TX 202612",
       "note": "近月 TX 一般交易時段最後成交價；不含夜盤"
